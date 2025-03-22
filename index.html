@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave AI</title>
+    <style>
+    /*
+    
+
+  *{
+     /* border: 1px solid black;*/
+    }
+    body{
+      margin: 0;
+    }
+    
+    
+
+/*For Dessktop and large screens*/
+    #header{
+      position: fixed;
+      top: 0%;
+      right: 0%;
+      width: 100%;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+    
+    #container{
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      width: 100%;
+     min-height: 100vh;
+    margin-top: 62px;
+    }
+    
+    
+    #chat-display{
+      min-height: 100vh;
+     /* background-color: gray;*/
+      display: flex;
+      flex-direction: column;
+      padding: 25px;
+      padding-top: 60px;
+      padding-bottom: 100px;
+      background-image: url(chatbackground1.jpeg);
+      background-position: fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      
+    }
+    
+    
+    .chatbot-msg-display{
+      background-color: lightgrey;
+      min-width: 50%;
+      max-width: 70%;
+      min-height: 15px;
+      color: black;
+      align-self: start;
+       margin: 15px 0;
+       border-radius: 15px;
+       text-align: left;
+       padding: 12px;
+    }
+    
+    .your-msg-display{
+      background-color: #3E424B;
+      min-width: 50%;
+      max-width: 70%;
+      min-height: 15px;
+      color: white;
+      align-self: end;
+      margin: 5px 2px;
+      border-radius: 15px;
+      text-align: left;
+      padding: 12px;
+    }
+    
+    #input-area{
+      position: fixed;
+      bottom: 0%;
+      left: 0%;
+      width: 100%;
+      height: 30px;
+      display: flex; 
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      /*background: greenyellow;*/
+      margin-bottom: 8px;
+      
+      
+    }
+    
+    #user-message-input{
+      width: 65%;
+      color: black;
+      background-color: white;
+      height: 50px;
+      border-radius: 5px;
+      padding: 5px 15px;
+      font-size: 25px;
+      border: 1px solid black;
+      
+    }
+    
+    #send-btn{
+      width: 25%;
+      color: white;
+      background-color: black;
+      height: 60px;
+      border-radius: 5px;
+      font-size: 25px;
+      font-weight: bold;
+      border: 1px solid black;
+    }
+    
+    
+    /* For mobiles and small screens*/
+    @media(max-width: 700px){
+      
+      
+      
+       #header{
+      position: fixed;
+      top: 0%;
+      right: 0%;
+      width: 100%;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+    }
+    
+      
+      #container{
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      width: 100%;
+     min-height: 100vh;
+    margin-top: 42px;
+    }
+    
+      
+      
+      #chat-display{
+      min-height: 80vh;
+     /* background-color: gray;*/
+      display: flex;
+      flex-direction: column;
+      padding: 8px;
+      padding-top: 90px;
+      padding-bottom: 100px;
+      background-image: url(chatbackground1.jpeg);
+      background-position: fixed;
+      background-size: cover;
+      background-attachment: fixed;
+      
+    }
+    
+    
+    
+    
+    
+     #input-area{
+      position: fixed;
+      bottom: 0%;
+      left: 0%;
+      width: 100%;
+      height: 30px;
+      display: flex; 
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      /*background: greenyellow;*/
+      margin-bottom: 20px;
+      
+      
+    }
+    
+    
+    #user-message-input{
+      width: 61%;
+      color: black;
+      background-color: white;
+      height: 35px;
+      border-radius: 5px;
+      padding: 5px 15px;
+      font-size: 14px;
+      border: 1px solid black;
+      
+    }
+    
+    #send-btn{
+      width: 25%;
+      height: 47px;
+      color: white;
+      background-color: black;
+      border-radius: 5px;
+      font-size: 15px;
+      font-weight: bold;
+      border: 1px solid black;
+      
+    }
+    
+    }
+
+
+    </style>
+</head>
+<body>
+ 
+
+<div id="container">
+    
+  <section id="header"><h1>Dave AI</h1></section>
+  
+
+  <div id="chat-display">
+      <!-- msg-display Models --
+    <div class="chatbot-msg-display">
+    Lorem ipsum
+  </div>
+     <div class="your-msg-display">
+    Lorem ipsum
+  </div>-->
+  
+  
+    <!-- End of real--
+     <div class="chatbot-msg-display">
+    Lorem ipsum
+  </div>
+     <div class="your-msg-display">
+    Lorem ipsum
+  </div>
+   <div class="chatbot-msg-display">
+    Lorem ipsum
+  </div>
+     <div class="your-msg-display">
+    Lorem ipsum
+  </div>
+   <div class="chatbot-msg-display">
+    Lorem ipsum
+  </div>
+     <div class="your-msg-display">
+    Lorem ipsum
+  </div>
+   <div class="chatbot-msg-display">
+    Lorem ipsum
+  </div>
+     <div class="your-msg-display">
+    Lorem ipsum
+  </div>
+   <div class="chatbot-msg-display">
+    Lorem ipsum
+  </div>
+     <div class="your-msg-display">
+    Lorem ipsum
+  </div>
+   <div class="chatbot-msg-display">
+    Lorem ipsum
+  </div>
+     <div class="your-msg-display">
+    Lorem ipsum
+  </div>
+   <div class="chatbot-msg-display">
+    Lorem ipsum
+  </div>
+     <div class="your-msg-display">
+    Lorem ipsum
+  </div>
+  -->
+  </div>
+  
+
+  
+  <form id="input-area">
+    <input id="user-message-input" type="text" placeholder="Enter your message here...">
+    <button id="send-btn" type="submit">Send</button>
+    
+  </form>
+</div>
+    <script>
+    
+    
+    
+        let inputArea = document.getElementById("input-area")
+        
+        let userMessageInput = document.getElementById("user-message-input")
+        
+        let chatDisplay = document.getElementById("chat-display")
+        
+        //let container = document.getElementById("container")
+        
+        let chatHistory = ""
+        let systemPrompt = "You are a sarcastic and funny AI called Dave. You always answer in a funny and sarcastic way. You are always consistent with your sarcasm during conversations. Your maximum reply should be 50 words"
+        
+        
+        
+        
+        const apiKey = "AIzaSyCODX26wsePmZg9RHQbdQNuk032vGqLrDQ"; // Replace with your actual API key
+const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+
+
+
+
+
+
+let displayResponse = function (value){
+  let newDiv = document.createElement("div")
+          newDiv.classList.add("chatbot-msg-display")
+         /* 
+         // Alternative way of doing this.
+         chatDisplay.innerHTML += ` <div class='chatbot-msg-display'>
+    ${responseText}
+  </div>`*/
+  
+           newDiv.innerHTML = `DAVE:<br><br> ${value}`
+           
+           chatDisplay.appendChild(newDiv) 
+  
+  //chatDisplay.scrollTop = chatDisplay.scrollHeight
+  //window.scrollTo(0, document.body.scrollHeight);
+  
+  
+  
+  
+  /*
+  document.querySelectorAll("bottomElement")
+  
+  .scrollIntoView({ behavior: "smooth" });
+  */
+  
+  
+ chatDisplay.lastElementChild.scrollIntoView({ behavior: "smooth" }); 
+  
+  
+  
+  
+  
+  //window.scrollTo(0, chatDisplay.scrollHeight);
+          
+
+}
+
+
+
+
+
+async function fetchApiResponse(urlString, textPrompt){
+  /*
+  userMessageInput.value = "gee"
+    console.log(userPrompt)
+  */
+  
+  try{
+    
+ let response = await fetch(urlString, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify( {
+  contents: [
+    {
+      parts: [ {text: textPrompt}]
+    }
+  ]
+})
+})
+
+if(!response.ok){
+  throw Error("Error: something went wrong...")
+}
+   
+  let data = await response.json()
+  
+  chatHistory = chatHistory + `\n\nChatbot: ${data.candidates[0].content.parts[0].text}`
+  
+   console.log(chatHistory)
+  
+  displayResponse(data.candidates[0].content.parts[0].text)
+  // console.log(data.candidates[0].content.parts[0].text)
+  
+  
+  
+  }catch(error){
+    displayResponse("Error: Failed to send request...")
+  console.log("Error:", error)
+  }
+    
+  
+        
+        
+   
+}   
+
+
+        
+  // async function run() {
+ // const result = await fetchApiResponse(url, reqData);
+ // console.log(result.candidates[0].content.parts[0].text);
+//}
+//run();
+        
+        
+        
+      
+        
+        inputArea.addEventListener("submit", (e)=>{
+          e.preventDefault()
+          
+          let newDiv = document.createElement("div")
+          newDiv.classList.add("your-msg-display")
+        /*Alternative way of doing this.
+         
+         chatDisplay.innerHTML += ` <div class='your-msg-display'>
+    ${userMessageInput.value}
+  </div>`*/
+           chatHistory = chatHistory + `\n\nUser: ${userMessageInput.value}`
+            console.log(chatHistory)
+           newDiv.innerHTML = `YOU:<br><br> ${userMessageInput.value}`
+           
+           chatDisplay.appendChild(newDiv)
+           
+           
+           
+           
+           
+           
+           let requestPrompt = `You are a Chatbot. Respond to the user based on the following system prompt ${systemPrompt}, and the following chat history:${ chatHistory } `
+
+          fetchApiResponse(url, requestPrompt);
+          userMessageInput.value = ""
+          //chatDisplay.scrollTop = chatDisplay.scrollHeight
+           
+           //window.scrollTo(0, document.chatDisplay.scrollHeight);
+          
+          /*
+          window.scrollTo(0, chatDisplay.scrollHeight);*/
+          
+          
+          //document.querySelectorAll("bottomElement")
+  
+  chatDisplay.lastElementChild.scrollIntoView({ behavior: "smooth" });
+        })
+
+    </script>
+</body>
+  </html>
